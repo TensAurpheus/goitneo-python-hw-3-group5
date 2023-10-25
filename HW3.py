@@ -2,9 +2,6 @@ from collections import UserDict
 from datetime import datetime
 import re
 
-class NumberArgsError(Exception):
-    pass
-
 
 def phone_validation(phone):
     if len(phone) == 10 and phone.isdigit():
@@ -33,11 +30,6 @@ def birthday_error_check(func):
         else:
             return "Enter birthday as DD.MM.YYYY!"
     return inner
-
-
-# def check_number_arguments(args, n):
-#     if len(args) != n:
-#         raise NumberArgsError
 
 
 class Field:
